@@ -1,10 +1,8 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM python:3.11-slim-bookworm AS base
 
-COPY data/run.sh /
+COPY run.sh /run.sh
 RUN chmod a+x /run.sh
 
-ENV ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
-RUN pip install open-webui
+RUN pip3 install open-webui
 
 CMD [ "/run.sh" ]
