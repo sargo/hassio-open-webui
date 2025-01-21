@@ -1,0 +1,18 @@
+name: Open WebUI
+version: 1.0.0
+slug: openwebui
+description: Home Assistant Open WebUI Add-ons
+url: https://github.com/sargo/hassio-open-webui/open-webui
+codenotary: wojciech@lichota.pl
+init: false
+arch:
+- aarch64
+- amd64
+options:
+  OPENAI_API_KEY: null
+schema:
+  OPENAI_API_KEY: str
+image: ghcr.io/open-webui/open-webui/{arch}
+ports:
+  3000/tcp: 8000
+startup: services
