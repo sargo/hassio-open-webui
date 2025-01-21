@@ -2,8 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache python3
-RUN python -m ensurepip --upgrade
-RUN python -m pip install --upgrade setuptools
+RUN python -m ensurepip --upgrade --break-system-packages
+RUN python -m pip install --upgrade setuptools --break-system-packages
 
 WORKDIR /data
 
