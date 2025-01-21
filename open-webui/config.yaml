@@ -12,7 +12,6 @@ options:
   OPENAI_API_KEY: null
 schema:
   OPENAI_API_KEY: str
-image: ghcr.io/open-webui/open-webui/{arch}
 ports:
   3000/tcp: 8000
 startup: services
