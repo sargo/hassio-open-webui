@@ -1,9 +1,10 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --no-cache python3
-RUN python -m ensurepip --upgrade --break-system-packages
-RUN python -m pip install --upgrade setuptools --break-system-packages
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
 
 WORKDIR /data
 
