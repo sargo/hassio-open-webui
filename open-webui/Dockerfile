@@ -8,6 +8,6 @@ WORKDIR /data
 COPY data/run.sh /
 RUN chmod a+x /run.sh
 
-RUN pip3 open-webui
+RUN pip3 install open-webui
 
 CMD [ "/run.sh" ]
