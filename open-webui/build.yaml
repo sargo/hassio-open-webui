@@ -1,8 +1,0 @@
-# base-python v11.0.6 contains python 3.11.x which is currently
-# the highest supported python version by open-webui
-build_from:
-  aarch64: ghcr.io/hassio-addons/base-python/aarch64:11.0.6
-  amd64: ghcr.io/hassio-addons/base-python/amd64:11.0.6
-  armhf: ghcr.io/hassio-addons/base-python/armhf:11.0.6
-  armv7: ghcr.io/hassio-addons/base-python/armv7:11.0.6
-  i386: ghcr.io/hassio-addons/base-python/i386:11.0.6
